@@ -383,3 +383,9 @@ cd ..\frontend
 :: รัน React
 npm run dev
 ```
+
+#note
+:: supabase
+ลองเก็บข้อมูลแบบ JSON
+
+:: next.JS
