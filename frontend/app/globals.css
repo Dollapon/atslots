@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@10..48,75..100,700;10..48,75..100,800&family=Mitr:wght@400;500;600&family=Space+Mono:wght@700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #fdf9f0;
+  --foreground: #1c1c17;
+  --ink: #1c1c17;
+  --primary: #451274;
+  --secondary: #e4006c;
+  --tertiary: #ffdf93;
+  --tertiary-dark: #765b00;
+  --muted: #4b4450;
+}
+
+@theme inline {
+  --font-display: "Bricolage Grotesque", sans-serif;
+  --font-sans: "Mitr", sans-serif;
+  --font-mono: "Space Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  background-image: radial-gradient(rgba(69, 18, 116, 0.08) 1px, transparent 1px);
+  background-size: 14px 14px;
+  color: var(--foreground);
+  font-family: "Mitr", sans-serif;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--secondary);
+  outline-offset: 3px;
+}
+
+@keyframes countdown-drain {
+  from {
+    transform: scaleX(1);
+  }
+
+  to {
+    transform: scaleX(0);
+  }
+}
+
+.countdown-bar {
+  transform-origin: left;
+  animation: countdown-drain 3s linear forwards;
+}
